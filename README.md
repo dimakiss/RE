@@ -1,2 +1,2 @@
-# RE
-Solution to Reverse Engineering challenges
+# Reverse Engineering challenges
+Solution to various Reverse Engineering challenges
