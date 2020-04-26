@@ -14,7 +14,12 @@ The first letter is xored with `10` the second with `20` the third with `30` the
 Every xored number save at ecx with previous xored numbers which is memory location (see `0x401090`) the function at `0x40109A` called sprintf
 the funtion add the previous numbers as longer string (see the format `%s%02x`) at `0x401094`.
 
-The ReadMe said we need to find the name that generate the sirial 5B134977135E7D13 from the sprintf format we know that every number added is length 2 
+![](main_keygen_creator.jpg)
+
+At `0x4010e2` and `0x4010e6` we can see the the generated serial moved to `ESI` and the inputed serial moved to `EAX`,
+we can see a loop from `0x4010EA` to `0x401108` that compare 2 bytes at the time and choose to jmp to the `badboy` or not.
+
+The ReadMe.txt said we need to find the name that generate the sirial 5B134977135E7D13 from the sprintf format we know that every number added is length 2 
 and we know that xor is Symmetrical means that a xor b=c, c xor a =b
 the numbers we need to xor are `5B 13 49 77 13 5E 7D 13`
 as we told the first will be xored with `10` the second with `20` and so on...
