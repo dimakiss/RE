@@ -39,7 +39,7 @@ Nothing helpful, we look at the stack and we scroll down (a lot) until we arrive
 
 ![](return_stack.jpg)
 
-The function that leads to the error message return to `0x4046B9F` what tells us that the function at `0x4046B9` caused the error massage the function `_vbaHresultCheckObj`
+The function that leads to the error message return to `0x4046B9F` what tells us that the function at `0x4046B9` caused the error massage the function `_vbaHresultCheckObj` (what this function does not seems to bother us to solve this challenge)
 
 ![](error_function.jpg)
 
