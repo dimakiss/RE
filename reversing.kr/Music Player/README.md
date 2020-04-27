@@ -21,3 +21,12 @@ If we scroll up from the `0x4045DE` line we can the comparison `CMP EAZ,0EA60`, 
 In `0x40455D` we can see that the value from `EBP-A4` moved to `EAX` we click on find references to the `EBP-4A` address.
 
 ![](reference_to_EBP-4A.jpg)
+
+Only `0x40455D` `0x404704` have the same porpuse, they are use to be compere with `EA60`. (`0x4045EB` and `0x4046E2` are used ass buffer for the current time not relevent to us for solving this challenge)
+
+I will try to patch the jumps at `0x40456B` and `0x40470E` so the jump will be taken no metter what time passed.
+
+`0040456B JL Music_Pl.004045FE `       ----> `0040456B JMP  Music_Pl.004045FE `
+
+`004046AB JGE SHORT Music_Pl.004046BF` ----> `004046AB JMP SHORT Music_Pl.004046BF`
+
