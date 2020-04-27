@@ -16,16 +16,26 @@ After clicking pause we go to call stack and we can see that the message box was
 
 ![](call_stack.jpg)
 
-After scolling up you can see that the routine starts at `0x4044C0` after jamping from `0x4023C5`.
-If we scroll up from the `0x4045DE` line we can the comparison `CMP EAZ,0EA60`, `EA60h = 60000` . Seems like its the comparison if the time is less them `60000ms` which is `60 sec` if `EAX>EA60` show error message.
-In `0x40455D` we can see that the value from `EBP-A4` moved to `EAX` we click on find references to the `EBP-4A` address.
+After scrolling up you can see that the routine starts at `0x4044C0` after jumping from `0x4023C5`.
+If we scroll up from the `0x4045DE` line we can the comparison `CMP EAZ,0EA60`, `EA60h = 60000`. It seems like its the comparison if the time is less them `60000ms` which is `60 sec` if `EAX>EA60` show error message.
+In `0x40455D` we can see that the value from `EBP-A4` moved to `EAX`.
 
-![](reference_to_EBP-4A.jpg)
 
-Only `0x40455D` `0x404704` have the same porpuse, they are use to be compere with `EA60`. (`0x4045EB` and `0x4046E2` are used ass buffer for the current time not relevent to us for solving this challenge)
-
-I will try to patch the jumps at `0x40456B` and `0x40470E` so the jump will be taken no metter what time passed.
+I will try to patch the jumps at `0x40456B` so the jump will be taken no matter what time passed.
 
 `0040456B JL Music_Pl.004045FE `----> `0040456B JMP  Music_Pl.004045FE `
-`004046AB JGE SHORT Music_Pl.004046BF` ----> `004046AB JMP SHORT Music_Pl.004046BF`
+
+We save the patch to knew exe `Music_Player1.exe` after running it we get an error 
+
+![](error.jpg)
+
+Its seems like the password we are looking for is `stenCare` but to know for for sure we will try to find where the error coming from.
+
+We open exe with ollyDBG run untill the error massage after that we pause and look at the call stack like before.
+
+![](call_stack_error2.jpg)
+
+Nothing helpfull, we look at the stack and we scroll down (alot) untill we arrive here, the first function that returns to our main code.
+
+![](return_stack.jpg)
 
