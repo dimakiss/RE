@@ -57,3 +57,7 @@ As we told `EAX=x+1+1+601605C7+1+1` we wont if to be equal `401071` --> `401071=
 We can check `EAX=A02A0AA6+1+1+601605C7+1+1=100401071=401071` so the solution must be `2687109798 (A02A0AA6h)`
 
 ![](solution.jpg)
+
+The next picture shows the before code and after the changed bytes at `0x401071`
+
+![](solutionolly.jpg)
