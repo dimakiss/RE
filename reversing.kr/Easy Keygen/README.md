@@ -1,4 +1,4 @@
-# Easy Crack
+# Easy Keygen
 source: http://reversing.kr/challenge.php
 
 ## Challenge
