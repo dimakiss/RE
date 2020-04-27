@@ -21,7 +21,7 @@ We follow the `401020` function and its call `GetDlgItemInt` at `0x40105A` which
 
 ![](GetDlgItemInt.jpg)
 
-Later the function `sub_40466F` being call it calls `0x40467A`, in `0x40467A`  `619060EBh` being saved at `dword_406016` and the code jump to $+5 meaning 5 bytes from this location (`0x404684`+5)=`0x404689`.
+Later the function `sub_40466F` being call it calls `0x40467A`, in `0x40467A`  `619060EBh` being saved at `dword_406016` and the code jump to `$+5` meaning 5 bytes from this location (`0x404684`+5)=`0x404689`.
 
 at `0x404689` the `dword_4084D0` being increased whats lead `dword_4084D0`=`x+1` (from before) 
 The code retns to the next line after the `0x404684`-->`0x404689` that increase `dword_4084D0` again so is equal `x+1+1`,
