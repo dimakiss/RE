@@ -29,13 +29,31 @@ We save the patch to knew exe `Music_Player1.exe` after running it we get an err
 
 ![](error.jpg)
 
-Its seems like the password we are looking for is `stenCare` but to know for for sure we will try to find where the error coming from.
+It seems like the password we are looking for is `stenCare` but to know for sure we will try to find where the error coming from.
 
-We open exe with ollyDBG run untill the error massage after that we pause and look at the call stack like before.
+We open exe with ollyDBG run until the error message after that we pause and look at the call stack like before.
 
 ![](call_stack_error2.jpg)
 
-Nothing helpfull, we look at the stack and we scroll down (alot) untill we arrive here, the first function that returns to our main code.
+Nothing helpful, we look at the stack and we scroll down (a lot) until we arrive here, the first function that returns to our main code.
 
 ![](return_stack.jpg)
+
+The function that leads to the error message return to `0x4046B9F` what tells us that the function at `0x4046B9` caused the error massage the function `_vbaHresultCheckObj`
+
+![](error_function.jpg)
+
+We see that the conditional jump at `0x4046AB` decides if jump over the error function or not.
+I patched the jump
+
+`004046AB JGE SHORT Music_Pl.004046BF` ----> `004046AB JMP SHORT Music_Pl.004046BF`
+
+Save the changes to `Music_Player2.exe` and its working
+
+![](solution.jpg)
+
+As u can see the password is `LIstenCare`
+
+
+`Note: the exe didn't work for me at the start I changed the Compatibility mode to windows 2000 at file-->Properties--> Compatibility-->Check the "Run this program in compatibility mode for : Windows 2000"`
 
