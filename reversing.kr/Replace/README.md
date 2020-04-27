@@ -29,7 +29,7 @@ the reurn code now is the return for the `call loc_40467A` that was called at `0
 
 ![](un_analysed.jpg)
 
-after analyse
+after analyse (click `c` on data)
 
 ![](analysed.jpg)
 
