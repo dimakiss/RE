@@ -8,6 +8,7 @@ The exe wait for Name and serial, and the readme text file tells us to find the 
 ## Solution
 We open Easy_keygen with ollyDbg we follow the step over until we get to the main function at `0x401000`.
 The program saves the number `10` `20` `30` at `0x401038` for later use.
+
 The program gets the Name at `0x401059`, we have a loop over the Name we inputted from `0x401077` to `0x4010B4`.
 The esi is a counter from 1-3 and its choose at `0x40107E` a number from the saved numbers `10` `20` `30`.
 The first letter is XORed with `10` the second with `20` the third with `30` the fourth with `10` again and so on.
