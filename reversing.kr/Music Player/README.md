@@ -26,7 +26,7 @@ Only `0x40455D` `0x404704` have the same porpuse, they are use to be compere wit
 
 I will try to patch the jumps at `0x40456B` and `0x40470E` so the jump will be taken no metter what time passed.
 
-`0040456B JL Music_Pl.004045FE `       ----> `0040456B JMP  Music_Pl.004045FE `
+`0040456B JL Music_Pl.004045FE `  			----> `0040456B JMP  Music_Pl.004045FE `
 
 `004046AB JGE SHORT Music_Pl.004046BF` ----> `004046AB JMP SHORT Music_Pl.004046BF`
 
