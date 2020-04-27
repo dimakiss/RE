@@ -22,6 +22,7 @@ We follow the `401020` function and its call `GetDlgItemInt` at `0x40105A` which
 ![](GetDlgItemInt.jpg)
 
 Later the function `sub_40466F` being call it calls `0x40467A`, in `0x40467A`  `619060EBh` being saved at `dword_406016` and the code jump to $+5 meaning 5 bytes from this location (`0x404684`+5)=`0x404689`.
+
 at `0x404689` the `dword_4084D0` being increased whats lead `dword_4084D0`=`x+1` (from before) 
 The code retns to the next line after the `0x404684`-->`0x404689` that increase `dword_4084D0` again so is equal `x+1+1`,
 the reurn code now is the return for the `call loc_40467A` that was called at `0x40466F` so the return address is `0x404674` which is unanalysed code 
@@ -46,4 +47,13 @@ We can see the code turned from `left` one to the `rigth` one
 
 ![](code_flow1.jpg)
 
-We can immidiatly see that `EAX` must be valid location so we could chage the byte to `90` lets assume that its valid address we keep looking and we 
+We can immidiatly see that `EAX` must be valid location so we could chage the byte to `90` lets assume that its valid address we keep looking `EAX` incresed by one and the byte at `EAX` replaced again with `90(NOPED)` 
+
+At the start of the solution we told that for solving this challange (good boy) we need to nop the 0x401071 and `0x401072` bytes 
+
+So then the code jumps again to `0x401071` at `0x4046C4` the jump over the good boy will not happaned.
+As we told `EAX=x+1+1+601605C7+1+1` we wont if to be equal `401071` --> `401071=x+1+1+601605C7+1+1` ---> `x=A02A0AA6`
+
+We can check `EAX=A02A0AA6+1+1+601605C7+1+1=100401071=401071` so the solution must be `2687109798 (A02A0AA6h)`
+
+![](solution.jpg)
