@@ -55,5 +55,5 @@ Save the changes to `Music_Player2.exe` and its working
 As u can see the password is `LIstenCare`
 
 
-`Note: the exe didn't work for me at the start I changed the Compatibility mode to windows 2000 at file-->Properties--> Compatibility-->Check the "Run this program in compatibility mode for : Windows 2000"`
+`Note: The exe didn't work for me at the start I changed the Compatibility mode to windows 2000 at file-->Properties--> Compatibility-->Check the "Run this program in compatibility mode for : Windows 2000"`
 
