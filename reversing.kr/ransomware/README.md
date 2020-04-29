@@ -11,7 +11,7 @@ the encrypted file's content
 
 ![](hexFile.png)
 
-`Note: after the key will xor the binary content byte by byte single byte will xor all the binaries with that byte, 2 bytes key will xor with jumps of 2 first byte the i+2 bytes and the second byte the i+1 bytes for 0<i<bytes amount, and so on`
+`Note: after the key will xor the binary content byte by byte single byte will xor all the binaries with that byte, 2 bytes key will xor with jumps of 2 first byte the i bytes and the second byte the i+1 bytes for 0<i<bytes amount, and so on`
 
 ## Solution
 
