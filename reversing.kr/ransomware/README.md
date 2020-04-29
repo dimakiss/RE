@@ -29,14 +29,14 @@ After going to DUMP in ollyDbg to `RVA 4BFFC`-->`0x44BFFC` the imports seems to 
 
 IDA shows that the main function has alot of junck instruction 
 
-```
-push eax,
-pop eax,
-push ebx,
-pop ebx,
-pusha,
-popa,
-nop,
+```asm
+push eax
+pop eax
+push ebx
+pop ebx
+pusha
+popa
+nop
 ```
 
 And after the junk which IDA commented at `Sorry,this node i too big to display`, the real code shows up.
@@ -59,7 +59,7 @@ Every PE file start the same so if I xor te original file with normal file bin I
 
 the script
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
