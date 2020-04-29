@@ -5,7 +5,9 @@ source: http://reversing.kr/challenge.php
 ## Challenge
 we have an exe file that wait for us to input a key, text file that tells us to `Decrypt File (EXE)` and file seems like the file we need to decrypt.
 
-![](Dialogbox.jpg)
+![](exe.png)
+
+the encripted file's content
 
 ## Solution
 
@@ -32,3 +34,8 @@ pusha,
 popa,
 nop,
 `
+
+And after the junk which IDA commented at `Sorry,this node i too big to display`, the real code shows up.
+The `sub_401000` seems to be junk code then jumping over in olly nothing happened we so its no seems important.
+
+The main code tries to open file and read his binarys indeed the files name is `file` our encripted file
