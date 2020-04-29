@@ -91,3 +91,7 @@ for i in range(100):
     print(chr(int((a^b))),end=" ")
 
 ```
+
+The key is `letsplaychess` , after running the `run.exe` we rename `file` to `file.exe` and run it
+
+![](key.png)
