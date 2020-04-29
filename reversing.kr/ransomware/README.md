@@ -57,6 +57,13 @@ Every PE file start the same so if I xor te original file with normal file bin I
 
 ![](encxornor.png)
 
+```python
+Normal bin ['4D','5A','90','00','03','00','00','00','04','00','00','00','FF','FF','00','00','B8','00','00','00','00','00','00', '00', '40', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00']
+Encrypted bin ['21', '3F', 'E4', '73', '73', '6C', '61', '79', '67', '68', '65', '73', '8C', '93', '65', '74', 'CB', '70', '6C', '61', '79', '63', '68', '65', '33', '73', '6C', '65', '74', '73', '70', '6C', '61', '79', '63', '68', '65', '73', '73', '6C', '65', '74', '73', '70', '6C', '61', '79', '63', '68', '65']
+6c 65 74 73 70 6c 61 79 63 68 65 73 73 6c 65 74 73 70 6c 61 79 63 68 65 73 73 6c 65 74 73 70 6c 61 79 63 68 65 73 73 6c 65 74 73 70 6c 61 79 63 68 65 
+
+l e t s p l a y c h e s s l e t s p l a y c h e s s l e t s p l a y c h e s s l e t s p l a y c h e
+```
 the script
 
 ```python
@@ -70,19 +77,17 @@ buff = ['{:02X}'.format(b) for b in buff]
 with open("encryptedBin",'rb') as f:
      buff1 = f.read()
 buff1 = ['{:02X}'.format(b) for b in buff1]
-print("Normal bin    ",buff[0:100])
-print("Encrypted bin ",buff1[0:100])
-for i in range(200):
+print("Normal bin    ",buff[0:50])
+print("Encrypted bin ",buff1[0:50])
+for i in range(50):
         a=int(buff[i], 16)
         b=int(buff1[i], 16)
-        print(str(hex(a^b))[2:4],end=" ")
+        print(str(hex(a^b)),end=" ")
 
-print("\n")
-for i in range(200):
-    a = int(buff[i],16)
-    b = int(buff1[i],16)
-    aa=int(str(a),10)
-    bb = int(str(b), 10)
-    print(chr(int((aa^bb))),end=" ")
+print("")
+for i in range(100):
+    a = int(str(int(buff[i],16)),10)
+    b = int(str(int(buff1[i],16)),10)
+    print(chr(int((a^b))),end=" ")
 
 ```
