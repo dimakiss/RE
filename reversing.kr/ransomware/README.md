@@ -52,8 +52,13 @@ The main code tries to open file and read his binarys indeed the files name is `
 
 after the loop is dont we have `fputc` instruction that returns the bin content to the `file` and the content is being printed 
 
-from `0x44A8CF` and `0x44A8E9` we know that the for evety byte in bin `new_byte=(old_byte) xor byte_key xor 0xFF`
-Every PE file start the same so if I xor te original file with normal file bin I should get the key (xored `0xFF` file's bin befor) that xored all this file from the begining.
+from `0x44A8CF` and `0x44A8E9` we know that the for evety byte in bin __(new_byte)=(old_byte) xor (byte_key) xor (0xFF)__
+Every PE file start the same so if I xor te original file with normal file bin I should get the key 
+
+I xored `0xFF` file's bin before so __(new_byte)xor (0xFF)=(old_byte) xor (byte_key)__ we will put __(new_byte)xor (0xFF)__ as __new_byte__ ---> __(new_byte)=(old_byte) xor (byte_key)__ 
+
+__(new_byte)xor (old_byte)=(byte_key)__ 
+
 
 ![](encxornor.png)
 
