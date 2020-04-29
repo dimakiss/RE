@@ -63,7 +63,7 @@ Encrypted bin ['21', '3F', 'E4', '73', '73', '6C', '61', '79', '67', '68', '65',
 6c 65 74 73 70 6c 61 79 63 68 65 73 73 6c 65 74 73 70 6c 61 79 63 68 65 73 73 6c 65 74 73 70 6c 61 79 63 68 65 73 73 6c 65 74 73 70 6c 61 79 63 68 65 
 l e t s p l a y c h e s s l e t s p l a y c h e s s l e t s p l a y c h e s s l e t s p l a y c h e
 ```
-__
+
 the script
 
 ```python
