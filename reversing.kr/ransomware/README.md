@@ -24,17 +24,11 @@ After going to DUMP in ollyDbg to `RVA 4BFFC`-->`0x44BFFC` the imports seems to 
 IDA shows that the main function has alot of junck instruction 
 
 `
-push eax
-
-pop eax
-
-push ebx
-
-pop ebx
-
-pusha
-popa
-
-nop
-
+push eax,
+pop eax,
+push ebx,
+pop ebx,
+pusha,
+popa,
+nop,
 `
