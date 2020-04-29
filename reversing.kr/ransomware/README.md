@@ -44,9 +44,9 @@ The `sub_401000` seems to be junk code then jumping over in olly nothing happene
 
 The main code tries to open file and read his binarys indeed the files name is `file` our encyripted file after few checks if the open was success full and the bytes' read save we the rutin the invole xor.
 
-`byte_44D370` defined at `0x44A798` so renamed to `KEY`
+`byte_44D370` defined at `0x44A798` so renamed to __KEY__
 
-`byte_5415B8` defined at `0x44A87C` so renamed to `File_Bin`
+`byte_5415B8` defined at `0x44A87C` so renamed to __File_Bin__
 
 ![](IDAxor.png)
 
@@ -57,13 +57,13 @@ Every PE file start the same so if I xor te original file with normal file bin I
 
 ![](encxornor.png)
 
-```python
+__```python
 Normal bin ['4D','5A','90','00','03','00','00','00','04','00','00','00','FF','FF','00','00','B8','00','00','00','00','00','00', '00', '40', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00']
 Encrypted bin ['21', '3F', 'E4', '73', '73', '6C', '61', '79', '67', '68', '65', '73', '8C', '93', '65', '74', 'CB', '70', '6C', '61', '79', '63', '68', '65', '33', '73', '6C', '65', '74', '73', '70', '6C', '61', '79', '63', '68', '65', '73', '73', '6C', '65', '74', '73', '70', '6C', '61', '79', '63', '68', '65']
 6c 65 74 73 70 6c 61 79 63 68 65 73 73 6c 65 74 73 70 6c 61 79 63 68 65 73 73 6c 65 74 73 70 6c 61 79 63 68 65 73 73 6c 65 74 73 70 6c 61 79 63 68 65 
-
 l e t s p l a y c h e s s l e t s p l a y c h e s s l e t s p l a y c h e s s l e t s p l a y c h e
 ```
+__
 the script
 
 ```python
@@ -92,6 +92,8 @@ for i in range(100):
 
 ```
 
-The key is `letsplaychess` , after running the `run.exe` we rename `file` to `file.exe` and run it
+The key is __letsplaychess__ , after running the `run.exe` we rename `file` to `file.exe` and run it
 
 ![](key.png)
+
+The solution is __Colle System__
