@@ -25,10 +25,16 @@ IDA shows that the main function has alot of junck instruction
 
 `
 push eax
+
 pop eax
+
 push ebx
+
 pop ebx
+
 pusha
 popa
+
 nop
+
 `
