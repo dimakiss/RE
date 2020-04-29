@@ -9,6 +9,7 @@ we have an exe file that wait for us to input a key, text file that tells us to 
 
 the encripted file's content
 
+![](hexFile.png)
 ## Solution
 
 PEview show saction names UPX1, PEiD tells the same and  deep scan shows that the exe was packed with `UPX 0.89.6`
