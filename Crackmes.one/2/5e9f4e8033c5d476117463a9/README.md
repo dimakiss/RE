@@ -15,6 +15,7 @@ There is a loop between `0x04B58E8` and `0x04B5902` to `0x04B5890`,\
 when `0x04B58FB` has a __memcmp__ call. 
 
 `Note: if we scroll up we will have the strings  djejie and ggkfjgjfrg  , which seem suspicious but we continue`
+
 ![](xref.png)
 
 The program will not break at the first time we input password, seems there is pre routine to this code\
