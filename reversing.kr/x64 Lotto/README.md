@@ -28,7 +28,7 @@ IDA tells us in the top of the main funtion `Offset to raw data for section: 000
 So the instruction's location is `0x400+0x128=0x528`
 
 __Before:__ ![](HexEditBefore.png)\
-__After:__  ![](HexEditAfter.png)
+__After :__ ![](HexEditAfter.png)
 
 
 
