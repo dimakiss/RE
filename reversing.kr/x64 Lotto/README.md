@@ -32,8 +32,7 @@ __Before:__\
 __After :__\
 ![](HexEditAfter.png)
 
-After saving the edited hex not matter what 6 numbers I put in the solution will be shown
-
+After saving the edited hex not matter what 6 numbers I put in the solution will be shown, and we get this massage\
 ![](solution.png)
 
 The key is `from_GHL2_-_!`
