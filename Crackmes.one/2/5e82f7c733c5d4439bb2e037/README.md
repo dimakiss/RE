@@ -3,24 +3,24 @@ source: https://crackmes.one/crackme/5e82f7c733c5d4439bb2e037
 
 # Challenge
 
-An exe file in wating for user name and password \
-The desctription of the challange is
+An exe file in waiting for user name and password \
+The description of the challenge is
 ``` 
 lvl1 - patch all checks
-lvl2 - patch only srand and find name with password
+lvl2 - patch only srand and find the name and the password
 lvl3 - find name and password without patching
 ```
 
 
 # Solution
 
-I opened the exe with IDA and looked for thes string __User name is__ the only corss reference is to ` sub_401330 `\
-There is a usage of `rand` and `time64` , at `0x4013C8` the funtion `sub_401A30` decide if the `al` register is __0__\
-if it is don't jump to `loc_4014BF` which is bad boy.
+I opened the exe with IDA and looked for the string __User name is__ the only cross-reference is to ` sub_401330 `\
+There is a usage of `rand` and `time64` , at `0x4013C8` the function `sub_401A30` decide if the `al` register is __0__\
+if it is don't jump to `loc_4014BF` which is a bad boy.
 
 ![](loc_4014BF.png)
 
-`Note: the test al,al and the jz jump can be noped to avoid this check`
+`Note: the test al, al, and the JZ jump can be noped to avoid this check`
 
 
 At `0x401437` `"Login success"` is moved to `EDX` and at `0x40143C` the same simillar check takes place,\
@@ -77,17 +77,14 @@ To
 002E1366 NOP
 ```
 
-The funtion that called in `0x2E1382` `sub_2E1240` which get pointer to `[EBP-0x70]` by the this pointer (`ECX`)and put the string\
-__`1kAlMiG2Kb7FzP5tM1QBI6DSS92c31Apgjk9lVK7d`__ which later comared to the user name.
+The function that called in `0x2E1382` `sub_2E1240` which get a pointer to `[EBP-0x70]` by `this pointer  (ECX)` and put the string\
+__`1kAlMiG2Kb7FzP5tM1QBI6DSS92c31Apgjk9lVK7d`__ which later compared to the user name.
 
-The `rand` at `0x2E13D5` always update `EAX` to the smae number so i decided that what the crackme autor meant..\
-The funtion that called in `0x2E13ED` the same `sub_2E1240` which get pointer to `[EBP-0x58]` by the this pointer (`ECX`)and put the string\
-__`pdonxRWd2YvlzRhbIO74SOKYoSsQ7sHeKcNBoLLC0G8g8RusnmNty8KZX71ZwmkBm1e9NqMib3lnu2wVKJDHmbyiIp`__ which later comared to the user password.
+The `rand` at `0x2E13D5` always update `EAX` to the same number so I decided that what the crackme Autor meant..\
+The function that called in `0x2E13ED` the same `sub_2E1240` which get the pointer to `[EBP-0x58]` by `this pointer (ECX)` and put the string\
+__`pdonxRWd2YvlzRhbIO74SOKYoSsQ7sHeKcNBoLLC0G8g8RusnmNty8KZX71ZwmkBm1e9NqMib3lnu2wVKJDHmbyiIp`__ which later compared to the user password.
 
 ![](simple_crackme2.png)
 
-`Note:with the "srand" the password and the name was random so lvl3 lost its point`
-
-
-
+`Note: with the "srand" the password and the name was random so lvl3 lost its point`
 
