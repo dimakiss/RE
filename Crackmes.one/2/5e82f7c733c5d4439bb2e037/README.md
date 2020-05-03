@@ -4,7 +4,7 @@ source: https://crackmes.one/crackme/5e82f7c733c5d4439bb2e037
 # Challenge
 
 An exe file in wating for user name and password \
-The desctription of the challange is\
+The desctription of the challange is
 ``` 
 lvl1 - patch all checks
 lvl2 - patch only srand and find name with password
@@ -27,7 +27,7 @@ At `0x401437` `"Login success"` is moved to `EDX` and at `0x40143C` the same sim
 if al=0 don't jump to `0xloc_40144A` \
 but if al!=0 we will skip the command `mov edx, offset aInvalidPasswor` and `EDX` will remain `"Login success"`
 
-![]()
+![](Login_success_screen.png)
 `Note: we will always jump over this update of EDX`
 
 # Lvl 1- Noping
