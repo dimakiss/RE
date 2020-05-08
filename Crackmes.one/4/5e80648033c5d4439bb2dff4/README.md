@@ -21,17 +21,17 @@ The third flag is hidden in the depths of the program.
 I opened the program with IDA and traced the function that decide if we input `0` or `1`, by cross referencing\
 the string `Welcom to maze game` the string used in `sub_401170` which called by `sub_4046E0`.\
 Immidiatly the `cmp     al, 31h` at `0x404D39` and `cmp     al, 30h` at `0x40528B`
-![](404D39.png)
+![](if_1_or_0.png)
 
 If `al== 1 or 0` we get here:
-![](404D4E.png)
+![](if_1_or_0_2.png)
 
 Under maze game we can see the 'sub_401170' from earlier if we follow `sub_4019C0` 
-![](401A51srnd.png)
+![](srand.png)
 
 The number we input is stored in us XORed with `0FF7E6F9Ch` and then compered with `0FF6AFE74h`\
 So if __number xor 0FF7E6F9Ch=0FF6AFE74h__ ---> __number=0FF6AFE74h xor 0FF7E6F9Ch__ ---> __1491e8 (1348072)__
-![](solution.png) // 1->1348072 ->key
+![](solution2.png) // 1->1348072 ->key
 
 The second key is: __sbh{d0n7_u53_r4nd_f0r_cryp7!}__
 
