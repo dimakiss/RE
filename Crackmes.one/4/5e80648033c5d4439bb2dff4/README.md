@@ -31,7 +31,7 @@ Under maze game we can see the 'sub_401170' from earlier if we follow `sub_4019C
 
 The number we input is stored in us XORed with `0FF7E6F9Ch` and then compered with `0FF6AFE74h`\
 So if __number xor 0FF7E6F9Ch=0FF6AFE74h__ ---> __number=0FF6AFE74h xor 0FF7E6F9Ch__ ---> __1491e8 (1348072)__
-![](solution2.png) // 1->1348072 ->key
+![](solution2.png)
 
 The second key is: __sbh{d0n7_u53_r4nd_f0r_cryp7!}__
 
