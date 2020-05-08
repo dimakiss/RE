@@ -23,7 +23,7 @@ the string `Welcom to maze game` the string used in `sub_401170` which called by
 Immidiatly the `cmp     al, 31h` at `0x404D39` and `cmp     al, 30h` at `0x40528B`
 ![](if_1_or_0.png)
 
-If `al== 1 or 0` we get here:
+If `al== 1 or 0` we get here:\
 ![](if_1_or_0_2.png)
 
 Under maze game we can see the 'sub_401170' from earlier if we follow `sub_4019C0` 
@@ -38,12 +38,13 @@ The second key is: __sbh{d0n7_u53_r4nd_f0r_cryp7!}__
 ## The first flag
 I opened the program with olly and brake point at `sub_401170` every time I step over this functiion in the\
 dump window `adwdasswaswsadsdadadasswwdawwdadaaddwdadasswwdwdaaddasaswsssaswdassdadda` shows up, every time the same string.\
-indeed if this string is inputed in the maze game this window pop-up:
+indeed if this string is inputed in the maze game this window pop-up:\
 ![](where_is_the_key.png)
 
 One of the hints are that the key is encoded in the path `adw...` after tring adifferent combination, 
 treating `w,a,s,d` as `0 1 2 3` when `a` is not `0` (don't make seanse) \
-I got this string **130312201202132313131220031003131133031312200303113312120222120312231331 or in hex 
+I got this string when `w=0 a=1 s=2 d=3`\
+**130312201202132313131220031003131133031312200303113312120222120312231331 or in hex 
 7368627B776834375F3768335F662A636B7D ---> shb{wh47_7h3_f*ck}**
 
 The first key is: __shb{wh47_7h3_f*ck}__
