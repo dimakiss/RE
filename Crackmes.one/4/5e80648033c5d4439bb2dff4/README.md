@@ -35,6 +35,19 @@ So if __number xor 0FF7E6F9Ch=0FF6AFE74h__ ---> __number=0FF6AFE74h xor 0FF7E6F9
 
 The second key is: __sbh{d0n7_u53_r4nd_f0r_cryp7!}__
 
+## The first flag
+I opened the program with olly and brake point at `sub_401170` every time I step over this functiion in the\
+dump window `adwdasswaswsadsdadadasswwdawwdadaaddwdadasswwdwdaaddasaswsssaswdassdadda` shows up, every time the same string.\
+indeed if this string is inputed in the maze game this window pop-up:
+![](where_is_the_key.png)
+
+One of the hints are that the key is encoded in the path `adw...` after tring adifferent combination, 
+treating `w,a,s,d` as `0 1 2 3` when `a` is not `0` (don't make seanse) \
+I got this string **130312201202132313131220031003131133031312200303113312120222120312231331 or in hex 
+7368627B776834375F3768335F662A636B7D ---> shb{wh47_7h3_f*ck}**
+
+The first key is: __shb{wh47_7h3_f*ck}__
+
 
 
 
