@@ -4,8 +4,8 @@ source: https://crackmes.one/crackme/5e82f7c733c5d4439bb2e037
 # Challenge
 
 An exe file  that askes us for input \
-* 0-maze game
-* 1-megadecrypt game
+* **0 -maze game**
+* **1 -megadecrypt game**
 
 The description of the challenge is
 ``` 
@@ -23,7 +23,7 @@ the string `Welcom to maze game` the string used in `sub_401170` which called by
 Immidiatly the `cmp     al, 31h` at `0x404D39` and `cmp     al, 30h` at `0x40528B`
 ![](404D39.png)
 
-If 'al== 1 or 0' we get here:
+If `al== 1 or 0` we get here:
 ![](404D4E.png)
 
 Under maze game we can see the 'sub_401170' from earlier if we follow `sub_4019C0` 
