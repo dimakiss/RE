@@ -26,7 +26,7 @@ Immidiatly the `cmp     al, 31h` at `0x404D39` and `cmp     al, 30h` at `0x40528
 If `al== 1 or 0` we get here:\
 ![](if_1_or_0_2.png)
 
-Under maze game we can see the 'sub_401170' from earlier if we follow `sub_4019C0` 
+Under maze game we can see the `sub_401170` from earlier if we follow `sub_4019C0` 
 ![](srand.png)
 
 The number we input is stored in us XORed with `0FF7E6F9Ch` and then compered with `0FF6AFE74h`\
