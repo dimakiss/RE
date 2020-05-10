@@ -19,3 +19,5 @@ The `unk_402008` actual size is `AFh` if we modify the `1Ch` to `AF` at the push
 so it can be modified in the stack.
 
 ![](solution_msg_box.png)
+
+The flag is: __I_a_M_t_h_e_e_n_C_o_D_i_n_g@flare-on.com__
