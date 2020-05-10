@@ -4,7 +4,7 @@ source: http://flare-on.com/
 # Challenge
 
 An exe that tells us `I never broke the encoding:`
-![](massagebox.png)
+![](messagebox.png)
 
 # Solution
 I open the program with IDA, the main function is `start` at `0x4011c0` which call the `MessageBoxA` function at the end.\
