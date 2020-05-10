@@ -1,5 +1,5 @@
 ## Level 2
-challenge name:__Overlong__
+challenge name:__Overlong__\
 source: http://flare-on.com/
 
 # Challenge
