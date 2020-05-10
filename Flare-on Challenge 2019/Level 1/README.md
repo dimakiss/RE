@@ -43,4 +43,4 @@ for(int i=0; i<code.Length;i++)
 Console.Write((char)(code[i]^'A'));
 }
 ```
-and the output is: __Bagel_Cannon__ which is our code for stage2 and we get the flag:__Kitteh_save_galixy@flare-on.com__
+and the output is: __Bagel_Cannon__ which is our code for stage2 and we get the flag: `Kitteh_save_galixy@flare-on.com`
