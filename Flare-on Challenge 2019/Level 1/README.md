@@ -7,19 +7,20 @@ An exe that waits for key
 
 # Solution
 
-The program is written in C# .NET so Reflector (.NET decompiler) may be helpfull.\
+The program is written in C# .NET so Reflector (.NET decompiler) may be helpfull.
 
 ![](the_forms_in_Ref.png)
 
 If we go to the void function `FireButton_Click` there is comperison between the text box and the string `"RAINBOW"`\
 ![](FireButton_Click.png)
 
-And its the correct value.\
+And its the correct code for stage1.\
+
 Next we have another code we need to enter of stage 2. By looking at the stage2 Form,\
 there is fuction call named `isValidWeaponCode` which takes our input value.
 ![](isValidWeaponCode.png)
 
-There is a the function XOR every char by 'A' stores is in char array and comperes it with\
+There is a the function XOR every char by 'A' stores is in char array and comperes it with the char array
 ```
 ['\x0003', ' ', '&', '$', '-', '\x001e', '\x0002', ' ', '/', '/', '.', '/']
 ```
