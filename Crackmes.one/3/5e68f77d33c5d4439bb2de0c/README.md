@@ -13,20 +13,20 @@ The description is: `Enter correct password for getting flag ;)`
 Opened the exe with OllyDbg and paused after the `Invalid Password` massage error.\
 By looking at the callstack its seems that `0x13914CB` decide wether the password is true or not.
 
-![]('call_stack.png')
+![](call_stack.png)
 
 I put Break point on `0x13914CB` and run again the exe till pause.\
 There are few checks I will fouces the main ones in order to find the key.\
 
-![]('next_char.png')\
+![](next_char.png)\
 The check at `0x1111BCB` check if the next character in our password is 0 or basicly its iritate on our pass,\
 the char is save at `EAX` for later use.
 
-![]('xor_check.png')\
+![](xor_check.png)\
 Here the `EAX` which store the letter is moved to `ECX`.\
 `EDX` is storing characters for `[ECX]` and by chacking at the dump section we can see this:\
 
-![]('dump_sectio.png')\
+![](dump_sectio.png)
 
 At `0x1111C01` `EDX` is XORed with `0x13` , because `0x13` XOR `0x13` is **0** I asumed that the hex value `0x13`\
 is the end of the password.\
@@ -37,7 +37,7 @@ The next C code which will find the right password:
 ```C
 #include <stdio.h>
 
-int main(void) {
+int main() {
    char arr[]={0x75,0x66,0x70, 0x78 ,0x7A ,0x7D, 0x74 ,0x4C ,0x7E ,0x23 ,0x61 ,0x75 ,0x7A,0x7D,0x74};
     for ( int i = 0; i <= sizeof(arr) ; i++ )
     {
@@ -49,7 +49,7 @@ int main(void) {
 
 The output is :__fucking_m0rfing__
 
-![]('soulution.png')
+![](soulution.png)
 
 The flag for this challnge is: __shb{Vir7u41_pr073c7_xD}__
 
