@@ -26,7 +26,7 @@ the char is save at `EAX` for later use.
 Here the `EAX` which store the letter is moved to `ECX`.\
 `EDX` is storing characters for `[ECX]` and by chacking at the dump section we can see this:\
 
-![](dump_sectio.png)
+![](dump_section.png)
 
 At `0x1111C01` `EDX` is XORed with `0x13` , because `0x13` XOR `0x13` is **0** I asumed that the hex value `0x13`\
 is the end of the password.\
@@ -49,7 +49,7 @@ int main() {
 
 The output is :__fucking_m0rfing__
 
-![](soulution.png)
+![](solution.png)
 
 The flag for this challnge is: __shb{Vir7u41_pr073c7_xD}__
 
