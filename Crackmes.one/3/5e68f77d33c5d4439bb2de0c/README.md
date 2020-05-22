@@ -3,24 +3,24 @@ source: https://crackmes.one/crackme/5e68f77d33c5d4439bb2de0c
 
 # Challenge
 
-An exe file in waiting for decrryption password \
-And an passwords.db file (which is empty)
+An exe file in waiting for decryption password \
+And passwords.db file (which is empty)
 
-The description is: `Enter correct password for getting flag ;)`
+The description is: `Enter the correct password for getting flag ;)`
 
 # Solution
 
 Opened the exe with OllyDbg and paused after the `Invalid Password` massage error.\
-By looking at the callstack its seems that `0x13914CB` decide wether the password is true or not.
+By looking at the call stack its seems that `0x13914CB` decides whether the password is true or not.
 
 ![](call_stack.png)
 
-I put Break point on `0x13914CB` and run again the exe till pause.\
-There are few checks I will fouces the main ones in order to find the key.\
+I put a Breakpoint on `0x13914CB` and run again the exe till pause.\
+There are few checks I will focus the main ones to find the key.\
 
 ![](next_char.png)\
-The check at `0x1111BCB` check if the next character in our password is __0__ or basicly its iritate on our pass,\
-the char is save at `EAX` for later use.
+The check at `0x1111BCB` check if the next character in our password is __0__ or basically its irritate on our pass,\
+the char is saved at `EAX` for later use.
 
 ![](xor_check.png)\
 Here the `EAX` which store the letter is moved to `ECX`.\
@@ -28,9 +28,9 @@ Here the `EAX` which store the letter is moved to `ECX`.\
 
 ![](dump_section.png)
 
-At `0x1111C01` `EDX` is XORed with `0x13` , because `0x13` XOR `0x13` is __0__ I asumed that the hex value `0x13`\
+At `0x1111C01` `EDX` is XORed with `0x13` , because `0x13` XOR `0x13` is __0__ I assumed that the hex value `0x13`\
 is the end of the password.\
-So every character from my input is compered with the  XORed `0x13` value of every character from `[ECX]` (showen in the dump section).
+So every character from my input is compared with the  XORed `0x13` value of every character from `[ECX]` (shown in the dump section).
 
 The next C code which will find the right password:
 
@@ -47,7 +47,7 @@ int main() {
 }
 ```
 
-The output is :__fucking_m0rfing__
+The output is __fucking_m0rfing__
 
 ![](solution.png)
 
