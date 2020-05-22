@@ -19,16 +19,16 @@ I put Break point on `0x13914CB` and run again the exe till pause.\
 There are few checks I will fouces the main ones in order to find the key.\
 
 ![](next_char.png)\
-The check at `0x1111BCB` check if the next character in our password is 0 or basicly its iritate on our pass,\
+The check at `0x1111BCB` check if the next character in our password is __0__ or basicly its iritate on our pass,\
 the char is save at `EAX` for later use.
 
 ![](xor_check.png)\
 Here the `EAX` which store the letter is moved to `ECX`.\
-`EDX` is storing characters for `[ECX]` and by chacking at the dump section we can see this:\
+`EDX` is storing characters for `[ECX]` and by chacking at the dump section we can see this:
 
 ![](dump_section.png)
 
-At `0x1111C01` `EDX` is XORed with `0x13` , because `0x13` XOR `0x13` is **0** I asumed that the hex value `0x13`\
+At `0x1111C01` `EDX` is XORed with `0x13` , because `0x13` XOR `0x13` is __0__ I asumed that the hex value `0x13`\
 is the end of the password.\
 So every character from my input is compered with the  XORed `0x13` value of every character from `[ECX]` (showen in the dump section).
 
