@@ -9,12 +9,12 @@ Output `Wrong Serial Key` if incorrect
 # Solution
 
 I opened the exe with die.exe and it's detected that this program is written in __.NET__\
-!()[die.png]
+![](die.png)
 
 The dnSpy can be used here to decompile the exe file. I opened the exe in dnSpy.\
 The main form contains a method called `btnCheck_Click` which decide if the name and the serial matches.\
 
-!()[dnspy.png]
+![](dnspy.png)
 
 __text__ which must be larger than 4, stores the upper case of the 4 characters of the name.\
 __text2__ stores the serial key.\
@@ -28,4 +28,4 @@ Back to the ` btnCheck_Click` method __text2__ compered with __value__ when __va
 So if the serial key should look like that: __X398+text+33CEA639__\
 __value__ its string var so the __+__ is just joining the strings.
 
-!()[solution.png]
+![](solution.png)
