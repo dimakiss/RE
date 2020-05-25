@@ -25,6 +25,7 @@ productId is a Label object which assigned by the method `InitializeComponent` w
 * __text5(productId3)__="A639"
 
 Back to the ` btnCheck_Click` method __text2__ compered with __value__ when __value = text3 + text + text4 + text5__\
-So if the serial key should look like that: X398+Name+33CEA639 when its string value so the __+__ is just joining the strings.
+So if the serial key should look like that: __X398+text+33CEA639__\
+__value__ its string var so the __+__ is just joining the strings.
 
 !()[solution.png]
