@@ -66,8 +66,8 @@ Which just calculates 1000 primes and exists doesnt make any problem.\
 The next instresting method is __CheckPassword()__
 ![](`CheckPassword.png`)
 
-__a__= the hash of the `Name`\ 
-__b__= -1 + the hash of Key \
+__a__= the hash of the `Name` \ 
+__b__= -1 + the hash of Key  \
 Because its hard to find which Name has a hash of -1+`number` and the `number` represent hash of another string.\
 I changer __b__ to:
 ```C#
