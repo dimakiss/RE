@@ -4,12 +4,13 @@ source: https://crackmes.one/5ab77f6633c5d40ad448cc6b
 # Challenge
 
 An exe file that asks for __Name__ and __Key__.\
-And readme.txt file that says:\
+And readme.txt file that says:
 ```
 Hi,
 Hope you like this crackme.
 Feel free to do whatever you like with the exe. The goal is to finish the prime number calculation.
-Make a KeyGen, patch, self key, do whatever you like ;) but please write a tut or let me know how you did it.
+Make a KeyGen, patch, self key, do whatever you like ;) 
+but please write a tut or let me know how you did it.
 Good luck
 ```
 
