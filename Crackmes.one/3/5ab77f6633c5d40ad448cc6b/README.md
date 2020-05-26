@@ -16,6 +16,7 @@ Good luck
 
 ![](The_exe.png)
 
+
 # Solution
 
 I opened the exe with die.exe and it says that this is a __.NET__ application.
@@ -27,7 +28,7 @@ The important suff here is: `updateButtonText()` `BackgroundThreadProgramWork` a
 
 
 
-I will start with __updateButtonText()__:\
+I will start with __updateButtonText()__:
 ![](updateButtonText.png)
 
 This method opens another 2 threds: `button1_GetProperties` and `button1_SetProperties`.
@@ -46,7 +47,7 @@ To:
 num2 - num > 50.0
 ```
 
-Now __button1_GetProperties__:\
+Now __button1_GetProperties__:
 ![](button1_GetProperties.png)
 
 The `(!fileInfo.Exists)` chackes if the file name is `CrackMe_gemigis_1.exe` If not exis.\
