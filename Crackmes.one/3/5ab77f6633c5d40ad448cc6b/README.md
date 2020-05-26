@@ -27,7 +27,7 @@ The important suff here is: `updateButtonText()` `BackgroundThreadProgramWork` a
 
 
 
-I will start with __updateButtonText()__:
+I will start with __updateButtonText()__:\
 ![](updateButtonText.png)
 
 This method opens another 2 threds: `button1_GetProperties` and `button1_SetProperties`.
