@@ -19,7 +19,7 @@ Good luck
 # Solution
 
 I opened the exe with die.exe and it says that this is a __.NET__ application.
-![](die.png)
+![](Die_.png)
 
 After openning the exe with dnSpy, under `Form1` there is `button1_Click` method.\
 The important suff here is: `updateButtonText()` `BackgroundThreadProgramWork` and `CheckPassword()`.\
