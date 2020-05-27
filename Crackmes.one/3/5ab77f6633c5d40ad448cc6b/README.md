@@ -47,7 +47,7 @@ To:
 num2 - num > 50.0
 ```
 
-Now __button1_GetProperties__:
+Now __button1_GetProperties__:\
 ![](button1_GetProperties.png)
 
 The `(!fileInfo.Exists)` checks if the file name is `CrackMe_gemigis_1.exe` If not exist.\
