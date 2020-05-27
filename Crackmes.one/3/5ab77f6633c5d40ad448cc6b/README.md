@@ -22,7 +22,7 @@ Good luck
 I opened the exe with die.exe and it says that this is a __.NET__ application.
 ![](Die_.png)
 
-After openning the exe with dnSpy, under `Form1` there is `button1_Click` method.\
+After opening the exe with dnSpy, under `Form1` there is `button1_Click` method.\
 The important suff here is: `updateButtonText()` `BackgroundThreadProgramWork` and `CheckPassword()`.\
 ![](`button1_Click.png`)
 
@@ -35,8 +35,8 @@ This method opens another 2 threds: `button1_GetProperties` and `button1_SetProp
 
 ![](button1_SetProperties.png)
 
-Simple make a sleep for __300 ms__ and if it took more then 1 sec its ends the leading to __bad boy__.\
-Because the autor said we can path I will change the code.\
+Simply make asleep for __300 ms__ and if it took more then 1 sec its ends the leading to __bad boy__.\
+Because the author said we can path I will change the code.\
 
 from:
 ```C# 
@@ -50,7 +50,7 @@ num2 - num > 50.0
 Now __button1_GetProperties__:
 ![](button1_GetProperties.png)
 
-The `(!fileInfo.Exists)` chackes if the file name is `CrackMe_gemigis_1.exe` If not exis.\
+The `(!fileInfo.Exists)` checks if the file name is `CrackMe_gemigis_1.exe` If not exist.\
 The `(-1920850742 != text.GetHashCode()` chackes if we made changes to the program so I made is:
 
 ```C#
@@ -65,12 +65,12 @@ I chaged it to:
 The the next instruction in __button1_Click__ afetr creaing the __updateButtonText__ thread is __BackgroundThreadProgramWork__\
 Which just calculates 1000 primes and exists doesnt make any problem.\
 
-The next instresting method is __CheckPassword()__
+The next interesting method is __CheckPassword()__
 ![](`CheckPassword.png`)
 
 __a__= the hash of the `Name` \
 __b__= -1 + the hash of Key  \
-Because its hard to find which Name has a hash of -1+`number` and the `number` represent hash of another string.\
+Because it's hard to find which Name has a hash of -1+`number` and the `number` represents hash of another string.\
 I changer __b__ to:
 ```C#
 b = Convert.ToString(this.textBox2.Text.GetHashCode());
