@@ -28,7 +28,7 @@ The important suff here is: `updateButtonText()` `BackgroundThreadProgramWork` a
 
 
 
-I will start with __updateButtonText()__:
+I will start with __updateButtonText()__:\
 ![](updateButtonText.png)
 
 This method opens another 2 threds: `button1_GetProperties` and `button1_SetProperties`.
@@ -36,7 +36,7 @@ This method opens another 2 threds: `button1_GetProperties` and `button1_SetProp
 ![](button1_SetProperties.png)
 
 Simply make asleep for __300 ms__ and if it took more then 1 sec its ends the leading to __bad boy__.\
-Because the author said we can path I will change the code.\
+Because the author said we can path I will change the code.
 
 from:
 ```C# 
