@@ -1,3 +1,5 @@
+import sys
+
 def create_patch(name):
     with open(str(name),'rb') as f:
         buff=f.read()
