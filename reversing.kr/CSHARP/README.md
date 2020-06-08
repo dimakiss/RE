@@ -34,4 +34,36 @@ python patch.py CSharp.exe
 CSharp_patched was created
 ```
 
+The `CSharp_patched.exe` sopuse to have fixed __MetMett__ this is the function that in it:\
+![](MetMett.png)
 
+This mathod XOR every char with different number and coperes it to another, if False __chk[0]=1__ which is our `array` from the check if __array[0]==1__ so we want to avoid it.\
+If I will XOR the two sides for __bt[i]^a=b__ I will get __bt[i]=b^a__. \
+I made a simple python scrypt for that :
+```python
+password=""
+password+=chr(int(str(74^16),10))#0
+password+=chr(int(str(87^17),10))#1
+password+=chr(int(str(77^33),10))#2
+password+=chr(int(str(70^51),10))#3
+password+=chr(int(str(29^68),10))#4
+password+=chr(int(str(49^102),10))#5
+password+=chr(int(str(117^51),10))#6
+password+=chr(int(str(238^160),10))#7
+password+=chr(int(str(241^144),10))#8
+password+=chr(int(str(226^181),10))#9
+password+=chr(int(str(163^238),10))#10
+password+=chr(int(str(44^17),10))#11
+print("The pasword is",password)
+
+The pasword is ZFluYWFNaWM=
+```
+This seems top be encrypted with Base64 and this is not the solution so lets try to decrypt it:
+``` python
+import base64
+print("The pasword is",base64.b64decode("ZFluYWFNaWM=").decode("utf-8"))
+
+The pasword is dYnaaMic
+```
+
+![](Solution.png)
