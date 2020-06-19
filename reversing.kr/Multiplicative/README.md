@@ -28,7 +28,7 @@ Output:13720
 
 That means __13720*2^64 -1536092243306511225__ is the first number devided by __26729__ so we can find a*26729.\
 If we will devide the number above by __26729__, Big number=a .
-But a must be a `long` number so we will need to subtract ecery overflow (2**64):\
+But a must be a `long` number so we will need to subtract ecery overflow (2**64):
 ```python
 big_number = (13720 * 2**64 - 1536092243306511225) // 26729
 if big_number > 9223372036854775807:
