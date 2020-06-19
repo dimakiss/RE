@@ -8,11 +8,12 @@ A file named `JavaCrackMe.jar`.
 I opened the file with IDA and this is what in __JavaCrackMe.class__:\
 ![](JavaCrackMe_class.png)
 
-The input saved in __met002 slot001__ then multiplyed by __26729__ and then compared to **-1536092243306511225**\
-Because **-1536092243306511225** is not devided by __26729__ its seems like its the reasult of over flow,\
-when long is larger then 2^63,The number becomes negetive.\
+The input saved in __met002 slot001__ then multiplied by __26729__ and then compared to **-1536092243306511225**\
+If it's not equal jump to `wrong` if its print `right`
+Because **-1536092243306511225** is not divided by __26729__ its seems like its the result of an overflow,\
+when long is larger then 2^63, The number becomes negative.\
 So our number __a*26729=-1536092243306511225__ or __a*26729__ __=n*2^64-1536092243306511225__ \
-we will need to find that number first to find a.\
+we will need to find that number first to find a.
 
 The next python scrip will do that
 ```python
