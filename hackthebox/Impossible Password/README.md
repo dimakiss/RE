@@ -12,7 +12,7 @@ Opened the file with IDA pro and head straight to main, There are 2 interesting 
 ![](main.png)
 
 There are few comparisons and few checks but there is no need to dig deeper.\
-Afer all comparisons and all the cheacks we get to the call of `sub_400978`\
+After all comparisons and all the checks, we get to the call of `sub_400978`\
 ![](call_to_sub_400978.png)
 
 __[rbp+var_40]__ contains the __"A]Kr=9k0=0o0;k1?k81t"__ from previous.\
@@ -20,7 +20,7 @@ __[rbp+var_40]__ contains the __"A]Kr=9k0=0o0;k1?k81t"__ from previous.\
 
 There is a for-loop with a XOR. `rdi` which is __"A]Kr=9k0=0o0;k1?k81t"__ is moved to `rax` and `[rbp+var_8]`.\
 `[rbp+var_D]` is 9, used for the XOR of the string __"A]Kr=9k0=0o0;k1?k81t"__.\
-When we are done with all the 19(13h) characters exit.
+When we are done with all the 19(13h) characters the program exit.
 So we need to XOR every char in __"A]Kr=9k0=0o0;k1?k81t"__ with `9`, I made this with python:
 ```python
 s="A]Kr=9k0=0o0;k1?k81t"
