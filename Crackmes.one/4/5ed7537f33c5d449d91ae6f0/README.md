@@ -3,7 +3,7 @@ source: https://crackmes.one/crackme/5ed7537f33c5d449d91ae6f0
 
 # Challenge
 
-An exe file with a text box in format of the password text box:
+An exe file with a text box in format of the password text box:\
 ![](exe.png)
 
 # Solution
