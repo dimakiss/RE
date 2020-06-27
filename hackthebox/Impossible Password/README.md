@@ -8,7 +8,7 @@ An `impossible_password.bin` file
 # Solution
 
 I used only IDA pro for this challenge.
-Opened the file with IDA pro and head straight to main, There are 2 interesting strings, __SuperSeKretKey__ and __"A]Kr=9k0=0o0;k1?k81t"__
+Opened the file with IDA pro and head straight to main, There are 2 interesting strings, __SuperSeKretKey__ and __"A]Kr=9k0=0o0;k1?k81t"__\
 ![](main.png)
 
 There are few comparisons and few checks but there is no need to dig deeper.\
