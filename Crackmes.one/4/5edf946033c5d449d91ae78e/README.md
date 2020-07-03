@@ -18,7 +18,7 @@ Indeed the string __" What is the key? "__ appear there cross-referencing leads 
 
 The function __puts__ used here to store the user's key string. It's also possible to find the __gets__ function to see where the key\
 is being stored by there is no need for that.\
-by scrolling further in the code I found this instruction which seems odd in all this junk code which is good sing for non-junk.\
+By scrolling further in the code I found this instruction which seems odd in all this junk code which is good sing for non-junk.\
 ![](non-junk.png)
 
 By cross-referencing its seems to be important, there are 6 different uses of that.
