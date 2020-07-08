@@ -40,7 +40,7 @@ We have 10 equations with 16 variables. By usining liniar algebra we can find th
 * __x_3=900-x_8+x_10-x_11-x_12-x_14-2*x_15-2*x_16__
 * __x_2=-450+x_8-x_10+x_11+x_12+x_15+2*x_16__
 * __x_1=-450+x_8+x_12+x_14+x_15+x_16__
-* where __x_8, x_10, x_11, x_12, x_14, x_15, x_16__ are independent variable
+* where __x_8, x_10, x_11, x_12, x_14, x_15, x_16__ are independent variable\
 When x_i i represent i-th position.
 
 I made python scrip for finding valid password see:  [solution.py](solution.py)
