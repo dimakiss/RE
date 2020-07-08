@@ -43,7 +43,7 @@ We have 10 equations with 16 variables. By usining liniar algebra we can find th
 * where __x_8, x_10, x_11, x_12, x_14, x_15, x_16__ are independent variable
 When x_i i represent i-th position.
 
-I made python scrip for finding valid password see ![solution](solution.py)
+I made python scrip for finding valid password see:  [solution.py](solution.py)
 
 ```cmd
 python solution.py
