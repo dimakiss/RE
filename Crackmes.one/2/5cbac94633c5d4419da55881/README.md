@@ -9,16 +9,16 @@ An exe file in waiting for a username and password
 
 I opened the exe with IDA and went for the strings.\
 I cross-referenced the first `Enter username` string, and I got to __sub_4014D2__ which look like the main function.\
-There is a manual load of `msvcrt_printf` and `msvcrt_scanf` it's simply can be tracked from the __call eax__.\
+There is a manual load of `msvcrt_printf` and `msvcrt_scanf` it's simply can be tracked from the __call eax__.
 
 The name saved in __unk_405040__ and the password at __[ebp+var_30]__.\
 Then the username passed to __sub_401EC0__ which cubes every character and sums it up, and the password passed to __sub_401F6C__ which multiplies it by 0.2 and flor it.\
-later the 2 numbers compered.
+Later the 2 numbers are compered.
 
-The __sub_401EC0__ pseudocode:
+The __sub_401EC0__ pseudocode:\
 ![](sub_401EC0.png)
 
-The __sub_401F6C__ pseudocode:
+The __sub_401F6C__ pseudocode:\
 ![](sub_401F6C.png)
 
 I made a python scrip for password generator:
@@ -29,7 +29,7 @@ for i in username:
     temp+=ord(i)**3
 print("Password range: ",int(temp/0.2),"-",int((temp+1)/0.2-1))
 ```
-__Output: __
+__Output:__
 ```
 Password range:  48948725 - 48948729
 ```
