@@ -8,7 +8,7 @@ A 2 mode crack me hard and easy
 # Solution
 
 I opened the exe with die.exe and it says that this is a __.NET__ application and protected with `Confuser X`.\
-![](Die_.png)
+![](Die.png)
 
 The deobfuscation. I opened the program with __dnSpy__, went for `<Module>` .cctor, brakepoint on `gchandle.Free()`.\
 Run, and saved `koi` Module from Modules window.
