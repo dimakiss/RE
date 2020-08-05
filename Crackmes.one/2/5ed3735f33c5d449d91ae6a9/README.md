@@ -17,9 +17,8 @@ Then the first 5 characters calculated with `AND 224(0E0h)` and compared to `32(
 The characters in place 6-9 summed up and calculated with `AND -100(0FFFFFF00h)` and compared to `256(100h)`.\
 The 9th character must be __@__ and the next 7 must be divisible by 3.
 
-I made a python script keygen [keygen.py](keygen.py)
+I made a python keygen At: [keygen.py](keygen.py)
 ```cmd
 python keygen.py
 879746QWX@BEHKNQ
 ```
-
