@@ -27,4 +27,4 @@ There is no check for username only the password __0238274__
 ### For the hard mode (2):
 ![](hard.png)
 
-The username: __Admin__ password: __8nJQWsKoqi9s81j9s81j__
+The username: __Admin__ password: __8nJQWsKoqi9s81jJa8j__
